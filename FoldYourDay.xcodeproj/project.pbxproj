@@ -15,6 +15,9 @@
 		A72037F42786891500A5975D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72037F22786891500A5975D /* LaunchScreen.storyboard */; };
 		A72037FF2786891500A5975D /* FoldYourDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72037FE2786891500A5975D /* FoldYourDayTests.swift */; };
 		A720380A2786891500A5975D /* FoldYourDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72038092786891500A5975D /* FoldYourDayUITests.swift */; };
+		A720381B278691F500A5975D /* Croissant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A720381A278691F500A5975D /* Croissant.swift */; };
+		A7203823278697E100A5975D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7203822278697E100A5975D /* MainViewController.swift */; };
+		A7203825278697F800A5975D /* AddCroissantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7203824278697F800A5975D /* AddCroissantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A72038052786891500A5975D /* FoldYourDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoldYourDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72038092786891500A5975D /* FoldYourDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldYourDayUITests.swift; sourceTree = "<group>"; };
 		A720380B2786891500A5975D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A720381A278691F500A5975D /* Croissant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Croissant.swift; sourceTree = "<group>"; };
+		A7203822278697E100A5975D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A7203824278697F800A5975D /* AddCroissantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCroissantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,13 @@
 		A72037E62786891200A5975D /* FoldYourDay */ = {
 			isa = PBXGroup;
 			children = (
+				A72037F52786891500A5975D /* Info.plist */,
 				A72037E72786891200A5975D /* AppDelegate.swift */,
 				A72037E92786891200A5975D /* SceneDelegate.swift */,
-				A72037EB2786891200A5975D /* ViewController.swift */,
-				A72037ED2786891200A5975D /* Main.storyboard */,
+				A72038192786918100A5975D /* Controller */,
+				A72038182786917800A5975D /* View */,
+				A72038172786916D00A5975D /* Model */,
 				A72037F02786891500A5975D /* Assets.xcassets */,
-				A72037F22786891500A5975D /* LaunchScreen.storyboard */,
-				A72037F52786891500A5975D /* Info.plist */,
 			);
 			path = FoldYourDay;
 			sourceTree = "<group>";
@@ -126,6 +132,33 @@
 				A720380B2786891500A5975D /* Info.plist */,
 			);
 			path = FoldYourDayUITests;
+			sourceTree = "<group>";
+		};
+		A72038172786916D00A5975D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A720381A278691F500A5975D /* Croissant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A72038182786917800A5975D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A72037F22786891500A5975D /* LaunchScreen.storyboard */,
+				A72037ED2786891200A5975D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A72038192786918100A5975D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A72037EB2786891200A5975D /* ViewController.swift */,
+				A7203822278697E100A5975D /* MainViewController.swift */,
+				A7203824278697F800A5975D /* AddCroissantViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A720381B278691F500A5975D /* Croissant.swift in Sources */,
 				A72037EC2786891200A5975D /* ViewController.swift in Sources */,
+				A7203825278697F800A5975D /* AddCroissantViewController.swift in Sources */,
 				A72037E82786891200A5975D /* AppDelegate.swift in Sources */,
 				A72037EA2786891200A5975D /* SceneDelegate.swift in Sources */,
+				A7203823278697E100A5975D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoldYourDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoldYourDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

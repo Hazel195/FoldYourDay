@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoldYourDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8H-LU-pcG">
+                                <rect key="frame" x="159" y="592" width="96" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="2nl-s0-y3z"/>
+                                    <constraint firstAttribute="height" constant="52" id="idD-DD-E3y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_start"/>
+                                <connections>
+                                    <segue destination="HJF-DM-bo7" kind="modal" modalPresentationStyle="currentContext" id="t4f-F3-zal"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Daily Crumbs (3)" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-WK-NE8">
+                                <rect key="frame" x="22.5" y="268" width="369" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="369" id="IRR-fZ-EUJ"/>
+                                    <constraint firstAttribute="height" constant="238" id="Xu6-eY-juU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CzD-WK-NE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="U38-nY-3DV"/>
+                            <constraint firstItem="CzD-WK-NE8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xua-u2-SD6"/>
+                            <constraint firstItem="CzD-WK-NE8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="ZR1-Qs-d71"/>
+                            <constraint firstItem="A8H-LU-pcG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fOn-S2-hbw"/>
+                            <constraint firstItem="A8H-LU-pcG" firstAttribute="top" secondItem="CzD-WK-NE8" secondAttribute="bottom" constant="86" id="zCT-WL-chV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Sek-ln-nU4">
+            <objects>
+                <viewController id="HJF-DM-bo7" customClass="MainViewController" customModule="FoldYourDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbE-mO-e4P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGF-ez-t4P">
+                                <rect key="frame" x="357" y="70" width="37" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xuy-ZW-TfB" kind="modal" modalPresentationStyle="currentContext" id="CZ2-cQ-m3u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AGF-ez-t4P" firstAttribute="width" secondItem="rbE-mO-e4P" secondAttribute="width" multiplier="0.089372" id="0NP-Qd-TDb"/>
+                            <constraint firstItem="AGF-ez-t4P" firstAttribute="top" secondItem="u80-Ao-h50" secondAttribute="top" constant="26" id="bGN-2B-NJh"/>
+                            <constraint firstItem="u80-Ao-h50" firstAttribute="trailing" secondItem="AGF-ez-t4P" secondAttribute="trailing" constant="20" id="k9y-dO-r1T"/>
+                            <constraint firstItem="AGF-ez-t4P" firstAttribute="height" secondItem="rbE-mO-e4P" secondAttribute="height" multiplier="0.0513393" id="teh-UA-DQW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u80-Ao-h50"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qey-jh-HEh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNg-f6-7Ru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262.3188405797102" y="116.51785714285714"/>
+        </scene>
+        <!--Add Croissant View Controller-->
+        <scene sceneID="DY2-PE-szA">
+            <objects>
+                <viewController id="Xuy-ZW-TfB" customClass="AddCroissantViewController" customModule="FoldYourDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFQ-5C-WT7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RW-MY-vlA">
+                                <rect key="frame" x="191" y="769" width="32" height="30"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="1ZL-uF-mDr"/>
+                                    <segue destination="HJF-DM-bo7" kind="presentation" modalPresentationStyle="currentContext" id="qgy-ll-jLs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuH-dO-VWq">
+                                <rect key="frame" x="126" y="332" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9MH-Lf-22N" firstAttribute="bottom" secondItem="2RW-MY-vlA" secondAttribute="bottom" constant="63" id="Cde-Kc-bW0"/>
+                            <constraint firstItem="2RW-MY-vlA" firstAttribute="centerX" secondItem="9MH-Lf-22N" secondAttribute="centerX" id="LV6-Zo-IMQ"/>
+                            <constraint firstItem="2RW-MY-vlA" firstAttribute="height" secondItem="pFQ-5C-WT7" secondAttribute="height" multiplier="0.0334821" id="el5-io-mHx"/>
+                            <constraint firstItem="2RW-MY-vlA" firstAttribute="width" secondItem="pFQ-5C-WT7" secondAttribute="width" multiplier="0.0772947" id="vY0-mI-FCg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9MH-Lf-22N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vra-2w-tT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317" y="83"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qgy-ll-jLs"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Daily Crumbs (3)" width="343" height="690"/>
+        <image name="btn_start" width="256" height="131"/>
+    </resources>
+</document>
