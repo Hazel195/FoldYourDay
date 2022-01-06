@@ -9,16 +9,17 @@
 import Foundation
 
 class Croissant {
-    var name: String?
+    var title: String?
     var pages: Int?
     var startDate: Date?
     var duration: Int?
     var finishingDate: Date?
     var comments: String?
+    var endComments: String?
     var notification: Bool?
     
-    init(name: String, pages: Int, startDate: Date, duration: Int, notification: Bool, comments: String?) {
-        self.name = name
+    init(title: String, pages: Int, startDate: Date, duration: Int, notification: Bool, comments: String?) {
+        self.title = title
         self.pages = pages
         self.startDate = startDate
         self.duration = duration
@@ -27,8 +28,8 @@ class Croissant {
         self.comments = comments ?? ""
     }
     
-    func getName() -> String! {
-        return name!;
+    func getTitle() -> String! {
+        return title!;
     }
     
     func getPages() -> Int! {
