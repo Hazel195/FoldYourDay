@@ -17,7 +17,6 @@
 		A720380A2786891500A5975D /* FoldYourDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72038092786891500A5975D /* FoldYourDayUITests.swift */; };
 		A720381B278691F500A5975D /* Croissant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A720381A278691F500A5975D /* Croissant.swift */; };
 		A7203823278697E100A5975D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7203822278697E100A5975D /* MainViewController.swift */; };
-		A7203825278697F800A5975D /* AddCroissantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7203824278697F800A5975D /* AddCroissantViewController.swift */; };
 		A720382727869D7800A5975D /* TitleCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A720382627869D7800A5975D /* TitleCViewController.swift */; };
 		A7461F9427869DAC00182C21 /* PagesCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7461F9327869DAC00182C21 /* PagesCViewController.swift */; };
 		A7461F9727869DD400182C21 /* ChapterCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7461F9627869DD400182C21 /* ChapterCViewController.swift */; };
@@ -60,7 +59,6 @@
 		A720380B2786891500A5975D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A720381A278691F500A5975D /* Croissant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Croissant.swift; sourceTree = "<group>"; };
 		A7203822278697E100A5975D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A7203824278697F800A5975D /* AddCroissantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCroissantViewController.swift; sourceTree = "<group>"; };
 		A720382627869D7800A5975D /* TitleCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCViewController.swift; sourceTree = "<group>"; };
 		A7461F9327869DAC00182C21 /* PagesCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesCViewController.swift; sourceTree = "<group>"; };
 		A7461F9627869DD400182C21 /* ChapterCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCViewController.swift; sourceTree = "<group>"; };
@@ -166,25 +164,16 @@
 		A72038192786918100A5975D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A7461F9527869DB200182C21 /* AddCroissantController */,
-				A72037EB2786891200A5975D /* ViewController.swift */,
-				A7203822278697E100A5975D /* MainViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		A7461F9527869DB200182C21 /* AddCroissantController */ = {
-			isa = PBXGroup;
-			children = (
-				A7203824278697F800A5975D /* AddCroissantViewController.swift */,
 				A720382627869D7800A5975D /* TitleCViewController.swift */,
 				A7461F9327869DAC00182C21 /* PagesCViewController.swift */,
 				A7461F9627869DD400182C21 /* ChapterCViewController.swift */,
 				A7461F9827869DE900182C21 /* DurationCViewController.swift */,
 				A7461F9A27869DF900182C21 /* CommentCViewController.swift */,
 				A7461F9C27869E0F00182C21 /* NotificationCViewController.swift */,
+				A72037EB2786891200A5975D /* ViewController.swift */,
+				A7203822278697E100A5975D /* MainViewController.swift */,
 			);
-			path = AddCroissantController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +311,6 @@
 				A7461F9B27869DF900182C21 /* CommentCViewController.swift in Sources */,
 				A72037EC2786891200A5975D /* ViewController.swift in Sources */,
 				A7461F9727869DD400182C21 /* ChapterCViewController.swift in Sources */,
-				A7203825278697F800A5975D /* AddCroissantViewController.swift in Sources */,
 				A7461F9927869DE900182C21 /* DurationCViewController.swift in Sources */,
 				A72037E82786891200A5975D /* AppDelegate.swift in Sources */,
 				A7461F9D27869E0F00182C21 /* NotificationCViewController.swift in Sources */,

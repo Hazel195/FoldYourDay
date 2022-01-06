@@ -10,9 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var newlyBakedCroissant: Croissant?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        showNewCroissant()
     }
- ]
+    
+    func showNewCroissant () {
+        if (newlyBakedCroissant != nil) {
+            print(newlyBakedCroissant!.title ?? "No new croissant backed")
+        }
+    }
+}

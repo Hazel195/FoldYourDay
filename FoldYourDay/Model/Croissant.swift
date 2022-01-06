@@ -11,6 +11,8 @@ import Foundation
 class Croissant {
     var title: String?
     var pages: Int?
+    var chapters: Int?
+    var ChapterNames: [String]?
     var startDate: Date?
     var duration: Int?
     var finishingDate: Date?
@@ -18,41 +20,61 @@ class Croissant {
     var endComments: String?
     var notification: Bool?
     
-    init(title: String, pages: Int, startDate: Date, duration: Int, notification: Bool, comments: String?) {
+    init() {
+        
+    }
+    
+    init(title: String, pages: Int, chapters: Int, startDate: Date, duration: Int, notification: Bool, comments: String?) {
         self.title = title
         self.pages = pages
+        self.chapters = chapters
         self.startDate = startDate
         self.duration = duration
         self.notification = notification
-        self.finishingDate = Calendar.current.date(byAdding: .day, value: duration, to: startDate)
+        self.finishingDate = Calendar.current.date(byAdding: .day, value: duration, to: startDate)!
         self.comments = comments ?? ""
     }
     
-    func getTitle() -> String! {
+    func getTitle() -> String {
         return title!;
     }
     
-    func getPages() -> Int! {
+    func getPages() -> Int {
         return pages!;
     }
     
-    func getStartDate() -> Date! {
+    func getChapters() -> Int {
+        return chapters!;
+    }
+    
+    func getStartDate() -> Date {
         return startDate!;
     }
     
-    func getDuration() -> Int! {
-        return duration;
+    func getDuration() -> Int {
+        return duration!;
     }
     
     func getFinishingDate() -> Date! {
         return finishingDate!;
     }
        
-    func getComments() -> String! {
+    func getComments() -> String? {
         return comments;
     }
        
     func getNotification() -> Bool! {
         return notification!;
+    }
+    
+    func setTitle(title: String) {
+        self.title = title
+    }
+    
+    func setPages(pages: Int) {
+        self.pages = pages
+    }
+    func setChapters(chapters: Int) {
+        self.chapters = chapters
     }
 }

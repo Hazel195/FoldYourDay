@@ -65,7 +65,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xuy-ZW-TfB" kind="modal" modalPresentationStyle="currentContext" id="CZ2-cQ-m3u"/>
+                                    <segue destination="Xuy-ZW-TfB" kind="modal" identifier="jnk" modalPresentationStyle="currentContext" id="CZ2-cQ-m3u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,8 +98,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="1ZL-uF-mDr"/>
-                                    <segue destination="72u-bS-VDo" kind="custom" id="xd0-Jl-Z0p"/>
+                                    <segue destination="72u-bS-VDo" kind="modal" identifier="addTitle" modalPresentationStyle="currentContext" id="F6P-BZ-DfP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuH-dO-VWq">
@@ -118,6 +117,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9MH-Lf-22N"/>
                     </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="KuH-dO-VWq" id="UC3-H6-g2g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vra-2w-tT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,12 +133,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqb-6L-GYJ">
-                                <rect key="frame" x="148" y="314" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="chapter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1N-rK-fmA">
                                 <rect key="frame" x="148" y="431" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,14 +146,23 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="IvN-8Y-xBC"/>
-                                    <segue destination="CbS-Jj-0ll" kind="custom" id="j5Y-fE-dW2"/>
+                                    <segue destination="CbS-Jj-0ll" kind="modal" identifier="addPages" modalPresentationStyle="currentContext" id="jQ2-R8-trW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqb-6L-GYJ">
+                                <rect key="frame" x="148" y="310" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3Zo-O0-nrc"/>
                     </view>
+                    <connections>
+                        <outlet property="chaptersTextField" destination="z1N-rK-fmA" id="qc4-8i-BbJ"/>
+                        <outlet property="pagesTextField" destination="hqb-6L-GYJ" id="wVk-xt-4hW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJr-Cv-ouU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,14 +188,16 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="99B-jV-vaR"/>
-                                    <segue destination="7cR-ip-Jfd" kind="custom" id="9FN-PA-HU0"/>
+                                    <segue destination="7cR-ip-Jfd" kind="modal" identifier="addChapters" modalPresentationStyle="currentContext" id="9FN-PA-HU0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="rdy-g1-gfS"/>
                     </view>
+                    <connections>
+                        <outlet property="chaptersTableView" destination="wuA-c3-o8b" id="lU7-Zw-MZ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKW-AJ-NDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,14 +222,16 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="sVP-Sx-xzT"/>
-                                    <segue destination="zGb-zK-lZK" kind="custom" id="1ru-rS-3ba"/>
+                                    <segue destination="zGb-zK-lZK" kind="modal" identifier="addDuration" modalPresentationStyle="currentContext" id="1ru-rS-3ba"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="yNM-4y-xBm"/>
                     </view>
+                    <connections>
+                        <outlet property="durationSlider" destination="mdF-S9-VHx" id="pJM-Yc-7Q1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBm-Ud-HHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,18 +256,20 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="qq8-gi-U0c"/>
-                                    <segue destination="HJF-DM-bo7" kind="custom" id="J2v-Qb-ptd"/>
+                                    <segue destination="dAn-fV-brV" kind="modal" identifier="addNotification" modalPresentationStyle="currentContext" id="lsm-E3-l7F"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="UMQ-k2-ci5"/>
                     </view>
+                    <connections>
+                        <outlet property="notificationSwitch" destination="4kx-xU-ym2" id="l9d-1l-8nJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D67-I1-VTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="785"/>
+            <point key="canvasLocation" x="3212" y="757"/>
         </scene>
         <!--CommentC View Controller-->
         <scene sceneID="gB4-eX-FKg">
@@ -281,21 +292,25 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCroissant:" destination="Xuy-ZW-TfB" eventType="touchUpInside" id="P3G-Nb-8jL"/>
+                                    <segue destination="HJF-DM-bo7" kind="modal" identifier="addComments" modalPresentationStyle="currentContext" id="juH-BT-EmG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99975711109999998" green="0.98867398500000003" blue="0.96470302340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="8vD-Qe-ffZ"/>
                     </view>
+                    <connections>
+                        <outlet property="commentsTextField" destination="6Y2-gQ-Vgh" id="9Tt-ZW-7CD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vF9-f2-EKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3212" y="785"/>
+            <point key="canvasLocation" x="2343" y="785"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J2v-Qb-ptd"/>
+        <segue reference="1ru-rS-3ba"/>
+        <segue reference="juH-BT-EmG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Daily Crumbs (3)" width="343" height="690"/>
